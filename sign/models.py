@@ -14,7 +14,7 @@ class Event(models.Model):
         return self.name
 
 class Guest(models.Model):
-    event = models.ForeignKey(Event,on_delete=models.CASCADE,default="") # 关联发布会id
+    event=models.ForeignKey(Event,on_delete=models.CASCADE) # 关联发布会id
     realname=models.CharField(max_length=64) #姓名
     phone=models.CharField(max_length=16) #手机号
     email=models.EmailField() #邮箱
